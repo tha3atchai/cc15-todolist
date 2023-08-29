@@ -1,0 +1,26 @@
+@import "../index.scss";
+
+.search {
+    position: relative;
+
+    &__icon {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.6rem;
+        font-weight: 200;
+        color: gray;
+        display: flex;
+    }
+
+    & > input {
+        width: 100%;
+        padding: 6px;
+        padding-left: 30px;
+        border-radius: 5px;
+        border: 1px solid $grey-light;
+        font-size: 1.6rem;
+        outline: none;
+    }
+}

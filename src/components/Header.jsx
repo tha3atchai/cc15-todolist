@@ -1,7 +1,8 @@
 import {
     FaHome,
-    FaSearch,
 } from "react-icons/fa";
+import Search from "./Search";
+import "./Header.scss";
 
 const Header = () => {
     return (
@@ -14,15 +15,7 @@ const Header = () => {
                 <h1>TodoList</h1>
             </div>
             <div className="header__search">
-                <div className="search">
-                    <span className="search__icon">
-                        <FaSearch />
-                    </span>
-                    <input
-                    type="text" 
-                    className="search__input"
-                    placeholder="search" />
-                </div>
+                <Search />
             </div>
             </header>
         </>
