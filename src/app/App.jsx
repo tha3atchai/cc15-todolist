@@ -58,3 +58,12 @@ function App() {
 }
 
 export default App;
+
+
+/*Challenge : Refactor
+- ให้ 2 section render UI ที่ ...
+ - Option A (2/5): render ต่างกัน <Lists /> กับ <Accordion /> : Difficult 2.5
+ - Option B (4/5) : render UI เดียวกัน เช่น <Lists /> 
+ - Option C (5/5) : render <List /> ภายใต้ <Accordion> <List /> </Accordion>
+ // ใช้ props.children 
+*/
