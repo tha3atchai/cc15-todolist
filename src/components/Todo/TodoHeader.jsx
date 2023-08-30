@@ -1,6 +1,5 @@
 import styles from "./TodoHeader.module.scss";
 
-
 function TodoHeader() {
     const today = new Date();
     const option = {weekday: "short", day: "numeric", month: "short"};

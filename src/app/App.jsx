@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import { FaCalendar, FaCalendarAlt, FaChevronDown, FaInbox } from "react-icons/fa";
 import Lists from "../components/Lists";
 import TodoHeader from "../components/Todo/TodoHeader";
+import TodoCreate from "../components/Todo/TodoCreate";
+import TodoList from "../components/Todo/TodoList";
 
 function App() {
 
@@ -16,7 +18,6 @@ function App() {
     {id: 4, text: "Project-A", icon: <FaInbox />, active: false},
     {id: 5, text: "Project-B", icon: <FaInbox />, active: false},
   ];
-
 
   // ObjectDetail => <ListItem ...ObjectDetail>
 
@@ -48,6 +49,8 @@ function App() {
       <div className="todo__content">
         <main className="todo__container">
             <TodoHeader />
+            <TodoCreate />
+            <TodoList />
         </main>
       </div>
     </div>
