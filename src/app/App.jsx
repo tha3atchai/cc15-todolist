@@ -1,9 +1,24 @@
 import "./App.scss";
 import Header from "../components/Header";
 import { FaCalendar, FaCalendarAlt, FaChevronDown, FaInbox } from "react-icons/fa";
-import ListItem from "../components/ListItem";
+import Lists from "../components/Lists";
 
 function App() {
+
+  const generalLists = [
+    {id: 1, text: "Inbox", icon: <FaInbox />, active: true},
+    {id: 2, text: "Today", icon: <FaCalendar />, active: false},
+    {id: 3, text: "Next 7 Days", icon: <FaCalendarAlt />, active: false},
+  ];
+
+  const projectList = [
+    {id: 4, text: "Project-A", icon: <FaInbox />, active: false},
+    {id: 5, text: "Project-B", icon: <FaInbox />, active: false},
+  ];
+
+
+  // ObjectDetail => <ListItem ...ObjectDetail>
+
   return (
     <div className='todo'>
       <div className="todo__header">
@@ -12,21 +27,7 @@ function App() {
       <div className="todo__sidebar">
         <aside className="sidebar">
           <section className="sidebar__category">
-            <ListItem 
-              icon={<FaInbox className="list__item__icon" />}
-              text="Inbox" 
-              active={true}
-              />
-            <ListItem
-              icon={<FaCalendar className="list__item__icon" />}
-              text="Today" 
-              active={false}
-              />
-            <ListItem
-              icon={<FaCalendarAlt className="list__item__icon" />} 
-              text="Next 7 days" 
-              active={false}    
-              />
+            <Lists data={generalLists} />
           </section>
           <section className="sidebar__category">
             <div className="accordion">
@@ -37,16 +38,7 @@ function App() {
                 </li>
               </div>
               <ul className="list">
-                <ListItem
-                  icon={<FaInbox className="list__item__icon" />}
-                  text="Project-A" 
-                  active={false}    
-                  />
-                <ListItem
-                  icon={<FaInbox className="list__item__icon" />} 
-                  text="Project-B" 
-                  active={false}    
-                  />
+                <Lists data={projectList} />
               </ul>
             </div>
           </section>
