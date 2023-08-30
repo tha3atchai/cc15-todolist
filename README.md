@@ -197,3 +197,12 @@ import styles from './Header.module.scss';
 
 // implement styles กับ className
 ```
+
+Project Setup
+- npx create-react-app <project-name>
+- cd <project-name> 
+
+Project Start/Stop
+
+
+Production
