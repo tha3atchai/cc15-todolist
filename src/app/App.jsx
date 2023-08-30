@@ -2,6 +2,7 @@ import "./App.scss";
 import Header from "../components/Header";
 import { FaCalendar, FaCalendarAlt, FaChevronDown, FaInbox } from "react-icons/fa";
 import Lists from "../components/Lists";
+import TodoHeader from "../components/Todo/TodoHeader";
 
 function App() {
 
@@ -44,7 +45,11 @@ function App() {
           </section>
         </aside>
       </div>
-      <div className="todo__content">TodoContent</div>
+      <div className="todo__content">
+        <main className="todo__container">
+            <TodoHeader />
+        </main>
+      </div>
     </div>
   );
 }
