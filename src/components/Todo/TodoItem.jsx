@@ -4,7 +4,8 @@ import { HiOutlineCheck } from 'react-icons/hi';
 import { FaPen, FaTrashAlt } from 'react-icons/fa';
 import TodoForm from './TodoForm';
 
-function TodoItem() {
+function TodoItem({id, task, status = true, due_date}) {
+    console.log(id);
   const [isOpenForm, setIsOpenForm] = useState(false);
 
   const handleClick = () => {
@@ -12,12 +13,12 @@ function TodoItem() {
   };
 
   let editTask = (
-      <li className={styles.todo}>
-        <div className={`${styles.todo__checkbox} ${styles.todo__checkbox__done}`}>
+      <li key={id} className={styles.todo}>
+        <div className={`${styles.todo__checkbox} ${status && styles.todo__checkbox__done}`}>
           <HiOutlineCheck className={styles.todo__checkbox__icon} />
         </div>
-        <p className={`${styles.todo__task} ${styles.todo__task__done}`}>todo-item 1 </p>
-        <span className={styles.todo__date}>30 Aug</span>
+        <p className={`${styles.todo__task} ${status && styles.todo__task__done}`}>{task}</p>
+        <span className={styles.todo__date}>{due_date}</span>
         <div className={styles.todo__action}>
           <span>
             <FaPen onClick={handleClick} className={styles.todo__edit} />
@@ -31,8 +32,8 @@ function TodoItem() {
 
   isOpenForm && (editTask = (
     <TodoForm setIsOpenForm={setIsOpenForm} textSubmit="Edit Task" />
-
   ))
+
   return (
     <>
     {editTask}    
